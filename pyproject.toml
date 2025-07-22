@@ -1,0 +1,34 @@
+[project]
+name = "aaide"
+version = "0.1.0"
+description = "Autonoumous Agentic AI For Data Engineering - An opensource Data Engineering Accelerator Platform"
+authors = [
+    { name = "Sinchan Banerjee", email = "sinchan.banerjee@ieee.org" },
+    { name = "Rahul Vishwakarma"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.dependencies]
+adk-python = "*"
+trino = "*"
+trino-python-client = "*"
+pandas = "*"
+numpy = "*"
+sqlalchemy = "*"
+pymongo = "*"
+boto3 = "*"
+azure-cosmos = "*"
+pyarrow = "*"
+faker = "*"
+pyyaml = "*"
+
+[tool.setuptools.packages.find]
+where = ["core", "tests"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
