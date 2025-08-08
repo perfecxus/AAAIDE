@@ -1,0 +1,307 @@
+{
+  "agent_card": {
+    "metadata": {
+      "agent_id": "data-engineering-requirements-agent-v1",
+      "agent_name": "Data Engineering Requirements Gathering Agent",
+      "agent_version": "1.0.0",
+      "created_by": "Data Engineering Team",
+      "created_at": "2025-01-07T00:00:00Z",
+      "last_updated": "2025-01-07T00:00:00Z",
+      "agent_type": "requirements_gathering",
+      "specialization": "data_engineering",
+      "complexity_level": "advanced",
+      "conversation_style": "consultative",
+      "memory_enabled": true,
+      "context_aware": true
+    },
+    "description": {
+      "short_description": "Senior data engineering consultant specialized in comprehensive requirements gathering for data pipeline and analytics projects",
+      "detailed_description": "This agent acts as an experienced data engineering consultant that conducts thorough requirements gathering sessions. It maintains perfect conversational memory, references previous answers contextually, validates cross-functional requirements, and generates comprehensive requirements documents. The agent guides users through 7 key requirement areas with intelligent questioning and contextual awareness.",
+      "use_cases": [
+        "Data pipeline requirements gathering",
+        "Analytics platform planning",
+        "Data warehouse design requirements",
+        "ETL/ELT process specification",
+        "Data governance requirement capture",
+        "Business intelligence project scoping",
+        "Real-time data processing requirements"
+      ],
+      "target_audience": [
+        "Data Engineers",
+        "Solution Architects", 
+        "Business Analysts",
+        "Project Managers",
+        "Data Product Managers"
+      ]
+    },
+    "capabilities": {
+      "core_functions": [
+        "Business opportunity analysis",
+        "Data source identification and specification",
+        "Data target definition",
+        "Non-functional requirements capture",
+        "Data consumption pattern analysis",
+        "Reusability requirements planning",
+        "Business rules documentation",
+        "Requirements document generation"
+      ],
+      "specialized_skills": [
+        "Cross-requirements validation",
+        "Contextual conversation management",
+        "Progress tracking and reporting",
+        "Consistency checking across requirement domains",
+        "Technical feasibility assessment",
+        "Stakeholder requirement alignment"
+      ],
+      "conversation_abilities": [
+        "Perfect session memory",
+        "Contextual referencing of previous answers",
+        "Intelligent follow-up questioning",
+        "Requirement gap identification",
+        "Inconsistency detection and resolution",
+        "Progressive requirement deep-dive"
+      ]
+    },
+    "technical_specifications": {
+      "supported_models": [
+        "gemini-2.0-flash",
+        "openai/gpt-4o",
+        "anthropic/claude-sonnet-4-20250514"
+      ],
+      "session_management": {
+        "session_persistence": true,
+        "state_tracking": true,
+        "conversation_history": true,
+        "cross_session_memory": true
+      },
+      "input_formats": [
+        "natural_language_text",
+        "structured_questionnaires",
+        "document_uploads",
+        "interactive_conversations"
+      ],
+      "output_formats": [
+        "structured_requirements_document",
+        "json_requirements_export",
+        "progress_reports",
+        "validation_summaries"
+      ]
+    },
+    "tools": [
+      {
+        "tool_name": "gather_business_opportunity",
+        "tool_type": "information_capture",
+        "description": "Captures business opportunity details including objectives, expected value, and project scope",
+        "parameters": [
+          "description",
+          "objectives", 
+          "expected_value"
+        ],
+        "output": "structured_business_context"
+      },
+      {
+        "tool_name": "add_data_source",
+        "tool_type": "specification_capture",
+        "description": "Documents data sources with technical specifications, volume estimates, and quality concerns",
+        "parameters": [
+          "source_name",
+          "source_type",
+          "location",
+          "format_type",
+          "volume_estimate",
+          "update_frequency",
+          "quality_concerns"
+        ],
+        "output": "data_source_specification"
+      },
+      {
+        "tool_name": "add_data_target",
+        "tool_type": "specification_capture", 
+        "description": "Defines data targets/destinations with SLA requirements and access patterns",
+        "parameters": [
+          "target_name",
+          "target_type",
+          "location",
+          "format_type",
+          "sla_requirements",
+          "access_patterns"
+        ],
+        "output": "data_target_specification"
+      },
+      {
+        "tool_name": "capture_nfrs",
+        "tool_type": "requirements_capture",
+        "description": "Captures non-functional requirements including performance, security, and compliance",
+        "parameters": [
+          "performance_requirements",
+          "scalability_requirements",
+          "availability_requirements", 
+          "security_requirements",
+          "compliance_requirements"
+        ],
+        "output": "nfr_specification"
+      },
+      {
+        "tool_name": "add_consumption_pattern",
+        "tool_type": "usage_analysis",
+        "description": "Documents how different consumers will access and use the data",
+        "parameters": [
+          "consumer_name",
+          "access_type",
+          "frequency",
+          "data_volume",
+          "latency_requirements"
+        ],
+        "output": "consumption_pattern_specification"
+      },
+      {
+        "tool_name": "capture_reusability_requirements",
+        "tool_type": "architecture_planning",
+        "description": "Defines reusability, standardization, and modularity requirements",
+        "parameters": [
+          "reuse_scope",
+          "standardization_needs",
+          "modularity_requirements",
+          "documentation_needs"
+        ],
+        "output": "reusability_specification"
+      },
+      {
+        "tool_name": "add_business_rule",
+        "tool_type": "logic_capture",
+        "description": "Documents business rules for data validation, transformation, and derivation",
+        "parameters": [
+          "rule_name",
+          "rule_description",
+          "rule_type",
+          "priority",
+          "validation_logic"
+        ],
+        "output": "business_rule_specification"
+      },
+      {
+        "tool_name": "get_completion_status",
+        "tool_type": "progress_tracking",
+        "description": "Provides contextual progress status with references to previously captured information",
+        "parameters": [],
+        "output": "contextual_progress_report"
+      },
+      {
+        "tool_name": "add_conversation_context",
+        "tool_type": "conversation_management",
+        "description": "Captures conversational context and insights for maintaining continuity",
+        "parameters": [
+          "message",
+          "context_type"
+        ],
+        "output": "context_tracking_status"
+      },
+      {
+        "tool_name": "validate_cross_requirements",
+        "tool_type": "validation_analysis",
+        "description": "Validates consistency and relationships between different requirement sections",
+        "parameters": [
+          "validation_type",
+          "details"
+        ],
+        "output": "validation_results_and_recommendations"
+      },
+      {
+        "tool_name": "generate_requirements_document",
+        "tool_type": "document_generation",
+        "description": "Generates comprehensive requirements document from all captured information",
+        "parameters": [],
+        "output": "complete_requirements_document"
+      }
+    ],
+    "interaction_patterns": {
+      "conversation_flow": [
+        "introduction_and_context_check",
+        "business_opportunity_exploration",
+        "data_landscape_mapping",
+        "technical_requirements_deep_dive", 
+        "consumption_and_usage_analysis",
+        "quality_and_governance_planning",
+        "validation_and_gap_analysis",
+        "document_generation_and_review"
+      ],
+      "question_types": [
+        "open_ended_exploration",
+        "specific_technical_clarification",
+        "contextual_follow_up",
+        "validation_and_consistency_check",
+        "implication_and_impact_analysis"
+      ],
+      "response_patterns": [
+        "contextual_acknowledgment",
+        "progressive_information_building",
+        "cross_reference_validation",
+        "expert_guidance_provision",
+        "gap_identification_and_resolution"
+      ]
+    },
+    "quality_metrics": {
+      "completeness_tracking": {
+        "required_sections": 7,
+        "completion_threshold": 100,
+        "quality_gates": [
+          "business_context_clarity",
+          "technical_specification_completeness", 
+          "cross_requirement_consistency",
+          "implementation_feasibility"
+        ]
+      },
+      "conversation_quality": {
+        "context_retention_score": "high",
+        "reference_accuracy": "high", 
+        "progressive_depth": "advanced",
+        "stakeholder_satisfaction": "target_90_percent"
+      }
+    },
+    "integration_capabilities": {
+      "supported_platforms": [
+        "google_adk",
+        "litellm_multi_model",
+        "custom_integrations"
+      ],
+      "export_formats": [
+        "json",
+        "yaml", 
+        "markdown",
+        "pdf_report",
+        "structured_templates"
+      ],
+      "api_endpoints": [
+        "/requirements/session/create",
+        "/requirements/session/continue",
+        "/requirements/status/check",
+        "/requirements/document/generate",
+        "/requirements/validate/cross"
+      ]
+    },
+    "limitations": {
+      "scope_boundaries": [
+        "focuses_on_requirements_not_implementation",
+        "requires_human_technical_validation",
+        "domain_specific_to_data_engineering"
+      ],
+      "technical_constraints": [
+        "requires_api_keys_for_llm_access",
+        "session_state_depends_on_service_configuration",
+        "memory_limited_to_session_duration"
+      ]
+    },
+    "compliance_and_security": {
+      "data_handling": {
+        "pii_detection": "basic",
+        "data_retention": "session_based",
+        "encryption": "in_transit_and_rest"
+      },
+      "privacy_features": [
+        "no_permanent_storage_of_sensitive_data",
+        "session_isolation",
+        "configurable_data_retention"
+      ]
+    }
+  }
+}
